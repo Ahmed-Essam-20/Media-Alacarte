@@ -1,0 +1,162 @@
+.solution {
+  text-align: center;
+
+  .small-title {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 50px;
+
+    .pink {
+      color: var(--primary-pink);
+      background: rgba(255,0,102,0.15);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+  }
+
+  /* Banner */
+  .solution-banner {
+    position: relative;
+    border-radius: var(--radius-large);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 50px;
+
+    img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      opacity: 0.95;
+    }
+
+    .banner-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px;
+      background: rgba(0,0,0,0.35);
+      backdrop-filter: blur(6px);
+      color: white;
+
+      p {
+        max-width: 60%;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .cta {
+        padding: 12px 28px;
+        border-radius: 40px;
+        background: var(--gradient-main);
+        color: white;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: var(--shadow-glow);
+
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+
+  /* Features Grid */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+  }
+
+  .feature-card {
+    background: #111;
+    padding: 25px;
+    border-radius: var(--radius-medium);
+    text-align: left;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+
+    &.highlight {
+      background: var(--gradient-main);
+      color: white;
+
+      p {
+        color: white;
+      }
+    }
+
+    .icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 15px;
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+
+    .arrow-btn {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: #222;
+      border: none;
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover {
+        background: #333;
+      }
+    }
+
+    &.highlight .arrow-btn {
+      background: white;
+      color: black;
+
+      &:hover {
+        background: #eee;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .solution {
+
+    .solution-banner img {
+      height: 200px;
+    }
+
+    .solution .banner-overlay p {
+      max-width: 100%;
+    }
+
+    .feature-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

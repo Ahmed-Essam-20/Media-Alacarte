@@ -1,0 +1,38 @@
+<section id="contact" class="contact-section section">
+  <h2>Contact Us</h2>
+
+  <div class="contact-content">
+    <div class="contact-card">
+      <h3>Let's work together</h3>
+      <p>
+        Have a project in mind? Fill out the form and our team will reach out
+        to you shortly.
+      </p>
+    </div>
+
+    <form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="contact-card form-card">
+      <input
+        type="text"
+        formControlName="name"
+        placeholder="Your Name"
+        [class.error]="contactForm.get('name')?.touched && contactForm.get('name')?.invalid"
+      />
+
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="Your Email"
+        [class.error]="contactForm.get('email')?.touched && contactForm.get('email')?.invalid"
+      />
+
+      <textarea
+        rows="5"
+        formControlName="message"
+        placeholder="Your Message"
+        [class.error]="contactForm.get('message')?.touched && contactForm.get('message')?.invalid"
+      ></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>

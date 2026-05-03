@@ -1,0 +1,13 @@
+<section id="orbit" class="orbit-section section">
+  <div class="orbit-background">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+  </div>
+
+  <div class="avatars">
+    @for (a of avatars; let i = $index; track a) {
+      <img class="avatar avatar-{{ i }}" [src]="a" alt="Avatar" />
+    }
+  </div>
+</section>

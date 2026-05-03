@@ -1,0 +1,43 @@
+.stats-bar {
+  background: var(--gradient-main);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-glow);
+  padding: 40px 0;
+  margin: 100px auto;
+  max-width: 1000px;
+
+  .stats-wrapper {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .stat-item {
+    color: #fff;
+
+    h3 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    p {
+      font-size: 14px;
+      opacity: 0.9;
+      line-height: 1.4;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .stats-bar {
+    padding: 30px 15px;
+
+    .stats-wrapper {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

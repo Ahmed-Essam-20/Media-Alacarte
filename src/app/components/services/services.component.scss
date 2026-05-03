@@ -1,0 +1,116 @@
+.services {
+  background: #0d0d0d;
+  text-align: center;
+
+  .icon-badge {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: var(--gradient-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 28px;
+    box-shadow: var(--shadow-glow);
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+  }
+
+  .service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .service-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px;
+    height: 480px;
+    box-shadow: var(--shadow-soft);
+    background: #111;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+
+    .card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 60%);
+      display: flex;
+      align-items: flex-end;
+      padding: 25px;
+      z-index: 2;
+
+      .card-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+          color: #fff;
+          font-size: 22px;
+          font-weight: 600;
+        }
+
+        .arrow {
+          background: var(--gradient-main);
+          border: none;
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          color: #fff;
+          font-size: 20px;
+          cursor: pointer;
+          line-height: 1;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+
+    .vertical-label {
+      position: absolute;
+      right: -28px;
+      top: 50%;
+      transform: rotate(90deg);
+      background: var(--gradient-main);
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      z-index: 3;
+    }
+  }
+}
+
+/* responsive */
+@media (max-width: 950px) {
+  .services {
+    .service-cards {
+      grid-template-columns: 1fr;
+    }
+    .service-card {
+      height: 380px;
+    }
+  }
+}

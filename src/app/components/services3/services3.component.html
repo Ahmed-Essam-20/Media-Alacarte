@@ -1,0 +1,25 @@
+<section class="services3 section">
+  <div class="icon-badge">✶</div>
+
+  <h2>Our Services</h2>
+
+  <div class="services-grid">
+    @for (service of services; track service.title) {
+      <div class="service-card">
+        <img [src]="service.img" alt="{{ service.title }}" />
+
+        <div class="service-footer">
+          <h3>{{ service.title }}</h3>
+
+          <button class="cta-arrow">
+            <span>→</span>
+          </button>
+        </div>
+
+        <div class="vertical-label" [style.background]="service.labelColor">
+          {{ service.title }}
+        </div>
+      </div>
+    }
+  </div>
+</section>

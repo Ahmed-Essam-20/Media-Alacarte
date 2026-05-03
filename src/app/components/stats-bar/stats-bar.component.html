@@ -1,0 +1,10 @@
+<section class="stats-bar section">
+  <div class="stats-wrapper">
+    @for (s of stats; track s.value) {
+      <div class="stat-item">
+        <h3>{{ s.value }}</h3>
+        <p>{{ s.label }}</p>
+      </div>
+    }
+  </div>
+</section>

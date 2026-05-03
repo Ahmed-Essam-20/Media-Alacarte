@@ -1,0 +1,56 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="logo-wrapper">
+    <div class="logo-icon"></div>
+    <div class="logo-text">
+      <span class="brand-main">media</span>
+      <span class="brand-sub">alacarte</span>
+    </div>
+  </div>
+
+  <ul class="nav-links">
+    <li>
+      <a
+        [class.active]="activeLink === 'The Platform'"
+        (click)="setActive('The Platform')"
+        >The Platform</a
+      >
+    </li>
+    <li>
+      <a
+        [class.active]="activeLink === 'Features'"
+        (click)="setActive('Features')"
+        >Features</a
+      >
+    </li>
+    <li>
+      <a
+        [class.active]="activeLink === 'Benefits'"
+        (click)="setActive('Benefits')"
+        >Benefits</a
+      >
+    </li>
+    <li>
+      <a
+        [class.active]="activeLink === 'Request a Demo'"
+        (click)="setActive('Request a Demo')"
+        >Request&nbsp;a&nbsp;Demo</a
+      >
+    </li>
+    <li>
+      <a
+        [class.active]="activeLink === 'Contact Us'"
+        (click)="setActive('Contact Us')"
+        >Contact&nbsp;Us</a
+      >
+    </li>
+    <li>
+      <a
+        [class.active]="activeLink === 'About Us'"
+        (click)="setActive('About Us')"
+        >About&nbsp;Us</a
+      >
+    </li>
+  </ul>
+
+  <button class="login-btn">Login</button>
+</nav>
