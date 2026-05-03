@@ -1,0 +1,6 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="[w3.org](http://www.w3.org/2000/svg)">
+  <path d="M0 700 C400 500 800 300 1200 500 L1200 800 L0 800 Z"
+        fill="rgba(255,255,255,0.03)"/>
+  <path d="M0 600 C350 450 850 250 1200 400 L1200 800 L0 800 Z"
+        fill="rgba(255,0,102,0.05)"/>
+</svg>
