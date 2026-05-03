@@ -30,4 +30,6 @@ import { StrategyComponent } from '../../components/strategy/strategy.component'
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {}
+export class HomeComponent {
+  
+}
