@@ -1,41 +1,31 @@
-<section class="solution section">
-
-  <p class="small-title">WHY MEDIA ALA CARTE?</p>
+<section id="solution" class="solution section">
+  <p class="small">WHY MEDIA A LA CARTE?</p>
 
   <h2>
-    Our All <span class="pink">Solution</span> for<br/>
+    Our All <span class="highlight">Solution</span> for<br />
     Smarter Media Buying
   </h2>
 
-  <div class="solution-banner">
+  <!-- Banner -->
+  <div class="banner">
     <img src="/assets/media/solution-banner.jpg" alt="Solution Banner" />
-
     <div class="banner-overlay">
       <p>
         We simplify media buying with data, automation, and collaboration to maximize ROI.
       </p>
-
-      <button class="cta">
-        Get Started
-      </button>
+      <button class="btn">Get Started</button>
     </div>
   </div>
 
-  <div class="feature-grid">
+  <!-- Feature Grid -->
+  <div class="features">
     @for (f of features; track f.title) {
-      <div class="feature-card" [class.highlight]="f.highlight">
-
+      <div class="feature" [class.highlight]="f.highlight">
         <div class="icon">{{ f.icon }}</div>
-
         <h3>{{ f.title }}</h3>
         <p>{{ f.desc }}</p>
-
-        <button class="arrow-btn">
-          →
-        </button>
-
+        <span class="arrow">↗</span>
       </div>
     }
   </div>
-
 </section>

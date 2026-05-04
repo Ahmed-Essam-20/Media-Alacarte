@@ -10,13 +10,13 @@ import { gsap } from 'gsap';
 export class OrbitComponent implements AfterViewInit {
 
   avatars = [
-    '/assets/media/orbit-avatar-1.jpg',
+    '/assets/media/orbit-avatar-1.png',
     '/assets/media/orbit-avatar-2.jpg',
-    '/assets/media/orbit-avatar-3.jpg',
-    '/assets/media/orbit-avatar-4.jpg',
-    '/assets/media/orbit-avatar-5.jpg',
-    '/assets/media/orbit-avatar-6.jpg',
-    '/assets/media/orbit-avatar-7.jpg'
+    '/assets/media/orbit-avatar-3.avif',
+    '/assets/media/orbit-avatar-4.avif',
+    '/assets/media/orbit-avatar-5.avif',
+    '/assets/media/orbit-avatar-6.avif',
+    '/assets/media/orbit-avatar-7.avif'
   ];
 
   constructor(private el: ElementRef) {}

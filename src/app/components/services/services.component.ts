@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollAnimationsService } from '../../shared/animations/scroll-animations.service';
 
 @Component({
   selector: 'app-services',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./services.component.scss']
 })
 export class ServicesComponent {
+  constructor(private anim: ScrollAnimationsService) {}
+
+ngAfterViewInit() {
+  this.anim.fadeUp('.service-card');   // Example selector
+}
+
   services = [
     {
       title: 'Advertisers',

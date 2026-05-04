@@ -7,46 +7,46 @@ gsap.registerPlugin(ScrollTrigger);
 @Injectable({ providedIn: 'root' })
 export class ScrollAnimationsService {
 
-  fadeInOnScroll(selector: string) {
+  fadeUp(selector: string) {
     gsap.utils.toArray(selector).forEach((el: any) => {
       gsap.from(el, {
-        opacity: 0,
         y: 40,
+        opacity: 0,
         duration: 1,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: el,
-          start: 'top 80%'
+          start: 'top 85%',
         }
       });
     });
   }
 
-  slideFromLeftOnScroll(selector: string) {
+  slideLeft(selector: string) {
     gsap.utils.toArray(selector).forEach((el: any) => {
       gsap.from(el, {
+        x: -60,
         opacity: 0,
-        x: -50,
         duration: 1,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: el,
-          start: 'top 85%'
+          start: 'top 85%',
         }
       });
     });
   }
 
-  slideFromRightOnScroll(selector: string) {
+  slideRight(selector: string) {
     gsap.utils.toArray(selector).forEach((el: any) => {
       gsap.from(el, {
+        x: 60,
         opacity: 0,
-        x: 50,
         duration: 1,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: el,
-          start: 'top 85%'
+          start: 'top 85%',
         }
       });
     });

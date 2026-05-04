@@ -1,5 +1,6 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ScrollAnimationsService } from '../../shared/animations/scroll-animations.service';
+
 
 @Component({
   selector: 'app-strategy',
@@ -7,11 +8,10 @@ import { ScrollAnimationsService } from '../../shared/animations/scroll-animatio
   templateUrl: './strategy.component.html',
   styleUrls: ['./strategy.component.scss']
 })
-export class StrategyComponent implements AfterViewInit {
+export class StrategyComponent {
 
   constructor(private anim: ScrollAnimationsService) {}
-
-  ngAfterViewInit(): void {
-    this.anim.fadeInOnScroll('.strategy-card');
-  }
+ngAfterViewInit() {
+  this.anim.fadeUp('.strategy-card');   // Example selector
+}
 }

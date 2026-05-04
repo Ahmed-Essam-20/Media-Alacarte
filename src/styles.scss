@@ -243,3 +243,26 @@ router-outlet {
     transform: translateY(0);
   }
 }
+
+/* --- subtle hover depth --- */
+.card,
+.service-card,
+.feature,
+.strategy-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.service-card:hover,
+.feature:hover,
+.strategy-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(255, 0, 102, 0.25);
+}
+
+/* --- button glow --- */
+.btn:hover,
+button:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 102, 0.45);
+}
+
